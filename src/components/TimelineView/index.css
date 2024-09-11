@@ -1,0 +1,57 @@
+/* Write your CSS here */
+.timeline-view-container {
+  padding: 20px;
+  background-color: #f1f5f9;
+}
+/* Basic container styling */
+.timeline-container {
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.timeline-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 30px;
+}
+
+/* Vertical line for the timeline */
+.timeline::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-color: #3b82f6;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Media query for above medium devices (desktop view) */
+@media (min-width: 768px) {
+  .timeline {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+
+  .timeline::after {
+    width: 4px;
+    background-color: #3b82f6;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
